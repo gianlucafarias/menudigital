@@ -4,7 +4,7 @@
         <!-- Brand -->
         <div class="sidenav-header d-flex align-items-center">
             <a class="navbar-brand" >
-                <img src={{asset("new/img/brand/blue.png")}} class="navbar-brand-img" alt="...">
+                <h2>Admin Panel</h2>
             </a>
             <div class="ml-auto">
                 <!-- Sidenav toggler -->
@@ -33,12 +33,12 @@
 
 
 
-                    <li class="nav-item">
-                        <a @if($root=="sliders") class="nav-link active" @endif  class="nav-link"   href={{route('all_sliders')}}>
-                            <i class="ni ni-album-2 text-green"></i>
-                            <span class="nav-link-text">Sliders</span>
-                        </a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a @if($root=="sliders") class="nav-link active" @endif  class="nav-link"   href={{route('all_sliders')}}>--}}
+{{--                            <i class="ni ni-album-2 text-green"></i>--}}
+{{--                            <span class="nav-link-text">Sliders</span>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
 
 
 

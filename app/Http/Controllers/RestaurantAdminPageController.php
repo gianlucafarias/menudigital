@@ -91,12 +91,14 @@ class RestaurantAdminPageController extends Controller
         return view('restaurants.addcategory');
     }
     public function update_category(Category $id){
+
         return view('restaurants.editcategory',
             [
                 'title' => 'update Category',
                 'root_name' => 'Category',
                 'root' => 'Category',
-                'data' => $id
+                'data' => $id,
+
             ]);
     }
 

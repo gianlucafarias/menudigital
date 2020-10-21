@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h5 class="card-title text-uppercase text-muted mb-0 text-white">Restaurantes</h5>
+                                <h5 class="card-title text-uppercase text-muted mb-0 text-white">Stores</h5>
                                 <span class="h2 font-weight-bold mb-0 text-white">{{$store_count}}</span>
                                 <div class="progress progress-xs mt-3 mb-0">
                                     <div class="progress-bar bg-success" role="progressbar" aria-valuenow="30"
@@ -21,7 +21,7 @@
 
                         </div>
                         <p class="mt-3 mb-0 text-sm">
-                            <a href="#!" class="text-nowrap text-white font-weight-600">Ver detalles</a>
+                            <a href="#!" class="text-nowrap text-white font-weight-600">See details</a>
                         </p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h5 class="card-title text-uppercase text-muted mb-0 text-white">Productos</h5>
+                                <h5 class="card-title text-uppercase text-muted mb-0 text-white">Products</h5>
                                 <span class="h2 font-weight-bold mb-0 text-white">{{$product_count}}</span>
                                 <div class="progress progress-xs mt-3 mb-0">
                                     <div class="progress-bar bg-success" role="progressbar" aria-valuenow="50"
@@ -42,7 +42,7 @@
 
                         </div>
                         <p class="mt-3 mb-0 text-sm">
-                            <a href="#!" class="text-nowrap text-white font-weight-600">Ver detalles</a>
+                            <a href="#!" class="text-nowrap text-white font-weight-600">See details</a>
                         </p>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h5 class="card-title text-uppercase text-muted mb-0 text-white">Ganancias</h5>
+                                <h5 class="card-title text-uppercase text-muted mb-0 text-white">Earnings</h5>
                                 <span class="h2 font-weight-bold mb-0 text-white">{{$account_info != NULL ?$account_info->currency_symbol:"₹"}} {{$earnings}}</span>
                                 <div class="progress progress-xs mt-3 mb-0">
                                     <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80"
@@ -63,7 +63,7 @@
 
                         </div>
                         <p class="mt-3 mb-0 text-sm">
-                            <a href="#!" class="text-nowrap text-white font-weight-600">Ver detalles</a>
+                            <a href="#!" class="text-nowrap text-white font-weight-600">See details</a>
                         </p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h5 class="card-title text-uppercase text-muted mb-0 text-white">Restaurantes Pendientes</h5>
+                                <h5 class="card-title text-uppercase text-muted mb-0 text-white">Pending Stores</h5>
                                 <span class="h2 font-weight-bold mb-0 text-white">{{$pending_stores }}</span>
                                 <div class="progress progress-xs mt-3 mb-0">
                                     <div class="progress-bar bg-success" role="progressbar" aria-valuenow="90"
@@ -84,7 +84,7 @@
 
                         </div>
                         <p class="mt-3 mb-0 text-sm">
-                            <a href="#!" class="text-nowrap text-white font-weight-600">Ver detalles</a>
+                            <a href="#!" class="text-nowrap text-white font-weight-600">See details</a>
                         </p>
                     </div>
                 </div>
@@ -98,10 +98,10 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Nuevos registros</h3>
+                                <h3 class="mb-0">New Registrations</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{route('all_stores')}}" class="btn btn-sm btn-primary">Ver todos</a>
+                                <a href="{{route('all_stores')}}" class="btn btn-sm btn-primary">See all stores</a>
                             </div>
                         </div>
                     </div>
@@ -110,10 +110,10 @@
                         <table class="table align-items-center text-center table-flush">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col">NOMBRE TIENDA</th>
-                                <th scope="col">CORREO TIENDA</th>
-                                <th scope="col">TELEFONO</th>
-                                <th scope="col">FECHA EXP SUSCRIPCIÓN</th>
+                                <th scope="col">STORE NAME</th>
+                                <th scope="col">STORE EMAIL</th>
+                                <th scope="col">PHONE NO</th>
+                                <th scope="col">SUBSCRIPTION END DATE</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -145,10 +145,10 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Tiendas Expiradas</h3>
+                                <h3 class="mb-0">Expired Stores</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{route('all_stores')}}" class="btn btn-sm btn-primary">Ver todas las tiendas</a>
+                                <a href="{{route('all_stores')}}" class="btn btn-sm btn-primary">See all stores</a>
                             </div>
                         </div>
                     </div>
@@ -157,9 +157,9 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col">NOMBRE TIENDA</th>
-                                <th scope="col">VENCIMIENTO SUSCRIPCIÓN</th>
-                                <th scope="col">TELEFONO</th>
+                                <th scope="col">STORE NAME</th>
+                                <th scope="col">SUBSCRIPTION END DATE</th>
+                                <th scope="col">PHONE NO</th>
                             </tr>
                             </thead>
                             <tbody>

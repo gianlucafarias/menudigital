@@ -95,24 +95,9 @@
                     </span>
                                     <small>View Stores</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-green">
-                      <i class="ni ni-books"></i>
-                    </span>
-                                    <small>Reports</small>
-                                </a>
-                                <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
-                      <i class="ni ni-pin-3"></i>
-                    </span>
-                                    <small>Maps</small>
-                                </a>
-                                <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
-                      <i class="ni ni-basket"></i>
-                    </span>
-                                    <small>Shop</small>
-                                </a>
+
+
+
                             </div>
                         </div>
                     </li>

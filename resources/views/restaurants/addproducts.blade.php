@@ -7,7 +7,7 @@
         <div class="card mb-4">
             <!-- Card header -->
             <div class="card-header">
-                <h3 class="mb-0">Agregar productos</h3>
+                <h3 class="mb-0">Add Products</h3>
                 @if(session()->has("MSG"))
                     <div class="alert alert-{{session()->get("TYPE")}}">
                         <strong> <a>{{session()->get("MSG")}}</a></strong>
@@ -24,7 +24,7 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="form-control-label" for="example3cols1Input">Foto</label>
+                                <label class="form-control-label" for="example3cols1Input">Image</label>
 
 
 
@@ -38,27 +38,27 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="form-control-label" for="example3cols2Input">Nombre del producto</label>
+                                <label class="form-control-label" for="example3cols2Input">Product Name</label>
                                 <input type="text" name="name" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label class="form-control-label" for="example3cols2Input">Precio</label>
+                                <label class="form-control-label" for="example3cols2Input">Price</label>
                                 <input type="number" name="price" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label class="form-control-label" for="example3cols2Input">Tiempo de preparación</label>
+                                <label class="form-control-label" for="example3cols2Input">Cooking Time</label>
                                 <input type="number" name="cooking_time" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="form-control-label" for="exampleFormControlSelect1">Seleccionar Categoría</label>
+                                <label class="form-control-label" for="exampleFormControlSelect1">Select Category</label>
                                 <select class="form-control" name="category_id" required>
                                     @foreach($category as $cat)
                                         <option value="{{ $cat->id }}">{{ $cat->name }}</option>
@@ -68,9 +68,9 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="form-control-label" for="exampleFormControlSelect1">Está disponible?</label>
+                                <label class="form-control-label" for="exampleFormControlSelect1">Is Enabled</label>
                                 <select class="form-control" name="is_active" required>
-                                    <option value="1">Si</option>
+                                    <option value="1">Yes</option>
                                     <option value="0">No</option>
                                 </select>
                             </div>
@@ -78,18 +78,18 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="form-control-label" for="exampleFormControlSelect1">Es un producto destacado?</label>
+                                <label class="form-control-label" for="exampleFormControlSelect1">Is Recommended</label>
                                 <select class="form-control" name="is_recommended" required>
-                                    <option value="1">Si</option>
+                                    <option value="1">Yes</option>
                                     <option value="0">No</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="form-control-label" for="exampleFormControlSelect1">Es Veg?</label>
+                                <label class="form-control-label" for="exampleFormControlSelect1">Is Veg</label>
                                 <select class="form-control" name="is_veg" required>
-                                    <option value="1">Si</option>
+                                    <option value="1">Yes</option>
                                     <option value="0">No</option>
                                 </select>
                             </div>
@@ -97,13 +97,13 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="form-control-label" for="exampleFormControlSelect1">Descripción</label>
+                                <label class="form-control-label" for="exampleFormControlSelect1">Description</label>
                                  <textarea class="form-control"name="description" rows="3" required></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-primary" type="submit">Publicar</button>
+                            <button class="btn btn-primary" type="submit">Submit</button>
                         </div>
 
 

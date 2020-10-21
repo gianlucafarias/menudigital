@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth\Login;
 
+use App\Application;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
@@ -18,17 +19,13 @@ class StoreController extends DefaultLoginController
     }
     public function showLoginForm()
     {
-        return view('auth.login.store');
+        $account_info = Application::all()->first();
+        return view('auth.login.store')->with(['account_info'=>$account_info]);
     }
     public function email()
     {
         return 'email';
     }
-//    public function logout(Request $request)
-//    {
-//        return 1;
-//    }
-
     protected function guard()
     {
         return Auth::guard('store');

@@ -24,6 +24,9 @@ Route::get('/', "Home\StoreHomeController@home")->name('home');
 
 Route::get('/store/{view_id}', "Home\StoreHomeController@index")->name('view_store');
 Route::get('/store/cart/{all}', "Home\StoreHomeController@index")->where('all', '.*');
+Route::get('/store/{view_id}/product/details/{product_id}', "Home\StoreHomeController@index")->where('all', '.*');
+
+
 
 Route::get('/store/view/qr/{view_id}/print','Home\QrController@print')->name('download_qr');
 // admin side
@@ -120,6 +123,8 @@ Route::prefix('/admin/store/') ->as('store_admin.')
         Route::patch('editcategories/{id}/update', 'StoreAdmin\CategoryController@update_category')->name('edit_category');
         Route::post('addproducts', 'StoreAdmin\ProductController@addproducts')->name('addproducts');
         Route::patch('editproducts/{id}/update', 'StoreAdmin\ProductController@edit_products')->name('edit_products');
+        Route::delete('products/delete', 'StoreAdmin\ProductController@delete_product')->name('delete_product');
+        Route::delete('categories/delete', 'StoreAdmin\CategoryController@delete_category')->name('delete_category');
 
 
         Route::get('/alltables', 'RestaurantAdminPageController@tables')->name('all_tables');

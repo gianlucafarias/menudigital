@@ -14,13 +14,13 @@
                     <div class="card-header card-header-divider text-center pt-4"> <h1>{{$data->store_name}}</h1><br>
                         {!! QrCode::size(250)->generate(route('view_store',['view_id'=>$data->view_id])); !!}</div>
                     <div class="card-body px-0">
-                        <p class="text-center"><strong>Hacé tu pedido desde tu celular</strong></p>
+                        <p class="text-center"><strong>Get our MENU on your PHONE</strong></p>
 
-                        <h4 class="text-center"><strong>Mesa N°:</strong></h4>
+                        <h4 class="text-center"><strong>Table no:</strong></h4>
 
-                        <p class="text-muted text-center"> <strong>Solo tenes que escanear el código QR con tu celular.<br>
-                            Se abrirá unan pestaña con un link. Hacé click en el link para ingresar.</strong><br><br><br>
-                            Desarrollado por:<br>
+                        <p class="text-muted text-center"> <strong>Simply open your phone's camera and point it at the code.<br>
+                            Tap on the link that appears.</strong><br><br><br>
+                            Powerd by:<br>
                             <img src="{{asset($account_info !=NULL ? $account_info->application_logo:'assets_home/images/logo/logo.png')}}" alt="logo" width="292px" height="69px;"><br>
                         </p>
 

@@ -5,8 +5,22 @@
 
     <div class="container-fluid mt--6">
 
+
+        <div class="alert alert-warning alert-dismissible fade show" style="margin-bottom: 15px;" role="alert">
+            <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+            <span class="alert-text"><strong>Delete Alert!</strong> Careful to delete category. auto delete all products in that category.</span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+
+
         <div class="card">
             <!-- Card header -->
+
+
+
+
             <div class="card-header border-0">
                 <div class="row">
                     <div class="col-6">
@@ -53,11 +67,20 @@
                             </td>
 
                             <td style="text-align: center">
-                                    <span>
-                                    <a href="{{route('store_admin.update_category',$cat->id)}}"  class="table-action" data-toggle="tooltip" data-original-title="Edit">
-                                        <i class="fas fa-edit"></i>
+
+                                    <a href="{{route('store_admin.update_category',$cat->id)}}"  class="btn btn-sm btn-primary" data-toggle="tooltip" data-original-title="Edit">
+                                        Edit
                                     </a>
-                                        </span>
+
+                                <a onclick="if(confirm('Are you sure you want to delete this category, auto delete all products in this category ?')){ event.preventDefault();document.getElementById('delete-form-{{$cat->id}}').submit(); }"
+                                   class="btn btn-sm btn-danger">Delete</a>
+                                <form method="post" action="{{route('store_admin.delete_category')}}"
+                                      id="delete-form-{{$cat->id}}" style="display: none">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="hidden" value="{{$cat->id}}" name="id">
+                                </form>
+
 
                             </td>
 

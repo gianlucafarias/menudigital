@@ -42,6 +42,8 @@ class StoreHomeController extends Controller
 
     public function index($view_id)
     {
+//        return 1;
+        $account_info = Application::all()->first();
         if(Store::all()->where('view_id','=',$view_id)->count() ==0){
             abort(404);
         }
@@ -51,24 +53,14 @@ class StoreHomeController extends Controller
         $store_id  = $store['id'];
         $store_name  = $store['store_name'];
         $description  = $store['description'];
-        $sliders = Slider::all()->where('is_visible','=',1);
-        $recommended = Product::all()->where('store_id','=',$store_id)
-            ->where('is_recommended','=',1)
-            ->where('is_active','=',1)->sortBy('name');
-        $categories = Category::all()->where('store_id','=',$store_id)
-            ->where('is_active','=',1)->sortBy('name');
-        $products = Product::all()->where('store_id','=',$store_id)
-            ->where('is_active','=',1)->sortBy('name');
-        $account_info = Application::all()->first();
-        return view('Home.show_store',['recommended'=>$recommended,
-            'categories'=>$categories,
-            'products'=>$products,
-            'account_info'=>$account_info,
-            'store_name'=>$store_name,
-            'description'=>$description,
-            'sliders'=>$sliders
+
+        return view('Home.show_store',[
+
+            'account_info' =>$account_info,
             ]);
     }
+
+
     public function indexjs($view_id)
     {
         if(Store::all()->where('view_id','=',$view_id)->count() ==0){
@@ -124,6 +116,11 @@ class StoreHomeController extends Controller
         }
         if(Store::create($data))
             return redirect(route('store.login'))->with("MSG","Account Created successfully")->with("TYPE", "success");
+    }
+    public function product_details(){
+//        return 1;
+
+        return view('Home.show_store');
     }
 
 

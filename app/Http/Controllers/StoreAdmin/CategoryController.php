@@ -47,5 +47,14 @@ class CategoryController extends Controller
 
     }
 
+    public function delete_category(Request $request)
+    {
+        if (Storage::delete(str_replace("storage", "public", Category::find($request->id)->image_url))) {
+            Category::destroy($request->id);
+        }
+        return back();
+
+    }
+
 }
 

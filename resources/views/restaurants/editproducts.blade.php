@@ -62,9 +62,9 @@
                                 <label class="form-control-label" for="exampleFormControlSelect1">Select
                                     Category</label>
                                 <select class="form-control" name="category_id" required>
-                                    <option value="{{$data->category_id}}">{{$data->category_id}}</option>
+
                                     @foreach($category as $cat)
-                                        <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                        <option value="{{ $cat->id }}" {{$data->category_id ==$cat->id ? "selected":null }}>{{ $cat->name }}</option>
                                     @endforeach
                                 </select>
                             </div>

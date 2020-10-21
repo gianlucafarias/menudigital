@@ -65,13 +65,29 @@
                             <td>{{ $pro->price }}</td>
 
                             <td style="text-align: center">
-                                    <span>
-                                    <a href="{{route('store_admin.update_products',$pro->id)}}"  title="edit">
-                                        <i class="fa fa-edit"></i>
+
+                                    <a href="{{route('store_admin.update_products',$pro->id)}}"  title="edit" class="btn btn-sm btn-primary">
+                                       Edit
                                     </a>
-                                        </span>
+
+
+
+
+                                <a onclick="if(confirm('Are you sure you want to delete this item?')){ event.preventDefault();document.getElementById('delete-form-{{$pro->id}}').submit(); }"
+                                   class="btn btn-sm btn-danger">Delete</a>
+                                <form method="post" action="{{route('store_admin.delete_product')}}"
+                                      id="delete-form-{{$pro->id}}" style="display: none">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="hidden" value="{{$pro->id}}" name="id">
+                                </form>
+
+
+
 
                             </td>
+
+
 
 
                         </tr>

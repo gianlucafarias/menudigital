@@ -21,21 +21,38 @@
             </div>
             <div class="card-body" id="printThis">
 
-                <div id="invoice-top">
 
-                    <div class="invoice-info">
-                        <h4><b>{{Auth::user()->store_name}}</b></h4>
-                        <p> {{Auth::user()->address}} <br> {{Auth::user()->phone}}
-                        </p>
+                <div class="card-body">
+                    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                    <div class="row row-example">
+                        <div class="col-6 col-md-8">
+                            <span>
+                                <i class="text-blue">Customer Details:</i><br>
+                                Customer Name: <b>{{$order->customer_name}}</b><br>
+                                Phone No: <b>{{$order->customer_phone}}</b>
+
+                            </span></div>
+                        <div class="col-6 col-md-4"><span>
+                                <i class="text-blue">Order Details:</i><br>
+                                 Order Id: <b>{{$order->order_unique_id}}</b><br>
+                                Placed: <b>{{date('d-m-Y',strtotime($order->created_at))}}</b><br>
+                                Table No: <b>{{$order->table_no}}</b>
+
+                            </span></div>
+
                     </div>
-                    <!--End Info-->
-                    <div class="title" style="float: right;">
-                        <h4>Invoice #{{$order->id}}</h4>
-                        <p>Issued: {{date('d-m-Y',strtotime($order->created_at))}}
-                        </p>
-                    </div>
-                    <!--End Title-->
+                    <div class="col"><span>
+                                <i class="text-blue">Customer Note:</i><br>
+                                 <b>{{$order->comments}}</b><br>
+
+
+                            </span></div>
+
                 </div>
+
+
+
+
 
 
                     <div class="table-responsive">

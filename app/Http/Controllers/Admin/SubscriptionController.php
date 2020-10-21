@@ -27,7 +27,7 @@ class SubscriptionController extends Controller
             return back()->with("MSG","Record added successfully")->with("TYPE", "success");
     }
 
-    public function editsubscription(Request $request){
+    public function editsubscription(Request $request,$id){
 
         $data = request()->validate([
             'name'=>'required',
@@ -39,7 +39,7 @@ class SubscriptionController extends Controller
         $data['is_active'] = isset($request['is_active']) ? 1:0;
 
 
-        if(StoreSubscription::whereId(auth()->id())->update($data)) {
+        if(StoreSubscription::whereId($id)->update($data)) {
             return back()->with("MSG", "Subscription Details Updated Successfully.")->with("TYPE", "success");
         }
     }

@@ -38,27 +38,27 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <span class="nav-link-inner--text">Inicio</span>
+                            <span class="nav-link-inner--text">Home</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link">
-                            <span class="nav-link-inner--text">Nosotros</span>
+                            <span class="nav-link-inner--text">About</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#service" class="nav-link">
-                            <span class="nav-link-inner--text">Servicio</span>
+                            <span class="nav-link-inner--text">Service</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{route('store_pricing')}}" class="nav-link">
-                            <span class="nav-link-inner--text">Precios</span>
+                            <span class="nav-link-inner--text">Pricing</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="/store/auth/login" class="nav-link">
-                            <span class="nav-link-inner--text">Ingresar</span>
+                            <span class="nav-link-inner--text">Login</span>
                         </a>
                     </li>
                 </ul>
@@ -71,7 +71,7 @@
                <span class="btn-inner--icon">
                  <i class="fas fa-shopping-cart mr-2"></i>
                </span>
-                            <span class="nav-link-inner--text">Registrar mi negocio</span>
+                            <span class="nav-link-inner--text">Register</span>
                         </a>
                     </li>
                 </ul>
@@ -87,15 +87,15 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="pr-5">
-                                <h1 class="display-2 text-white font-weight-bold mb-0">Reabrí tu restaurante o bar</h1>
+                                <h1 class="display-2 text-white font-weight-bold mb-0">Re-open your restaurants</h1>
                                 <h2 class="display-4 text-white font-weight-light">With a
                                     contactless {{$account_info !=NULL ? $account_info->application_name:'CHEF MENU'}}
                                     Menu.</h2>
                                 <p class="text-white mt-4">Make your restaurant a safe place to eat or grab-and-go by
                                     deploying a touch-free QR Code menu.</p>
                                 <div class="mt-5">
-                                    <a href="/store/auth/login" class="btn btn-neutral my-2">Ingresar</a>
-                                    <a href="{{route('store_register')}}" class="btn btn-default my-2">Registrarme ahora</a>
+                                    <a href="/store/auth/login" class="btn btn-neutral my-2">Login Now</a>
+                                    <a href="{{route('store_register')}}" class="btn btn-default my-2">Register now</a>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +326,7 @@
         <!-- Card header -->
         <div class="card-header">
             <!-- Title -->
-           <h5 class="h3 mb-0">Contact us</h5>
+            <h5 class="h3 mb-0">Contact us</h5>
         </div>
         <!-- Card body -->
         <div class="card-body">

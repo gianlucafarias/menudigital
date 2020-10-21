@@ -23,8 +23,7 @@
                         <th class="text-center">Store Name</th>
                         <td class="text-center"> Logo</td>
                         <th class="text-center"> Store Email</th>
-                        <th class="text-center">Address</th>
-                        <th class="text-center">Description</th>
+
                         <th class="text-center">Phone No</th>
                         <th class="text-center">Subscription End Date</th>
                         <th class="text-center">Visibility</th>
@@ -50,8 +49,6 @@
 
 
                             <td>{{ $store->email }}</td>
-                            <td>{{ $store->address }}</td>
-                            <td>{{ $store->description }}</td>
                             <td>{{ $store->phone }}</td>
                             <td>{{ date("d-m-Y",strtotime($store->subscription_end_date)) }}</td>
                             <td>

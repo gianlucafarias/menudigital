@@ -11,7 +11,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Ordenes totales</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Total Orders</h5>
                                     <span class="h2 font-weight-bold mb-0">{{$order_count}}</span>
                                 </div>
                                 <div class="col-auto">
@@ -33,7 +33,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Productos Vendidos</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Item Sold</h5>
                                     <span class="h2 font-weight-bold mb-0">{{$item_sold}}</span>
                                 </div>
                                 <div class="col-auto">
@@ -55,7 +55,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Ganancias Totales</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Total Earnings</h5>
                                     <span
                                         class="h2 font-weight-bold mb-0">{{$account_info!=NULL?$account_info->currency_symbol:"₹"}} {{$earnings}}</span>
                                 </div>
@@ -79,7 +79,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Vencimiento de Suscripción</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Subscription end date</h5>
                                     <span class="h2 font-weight-bold mb-0">{{date('d-m-Y',strtotime(auth()->user()->subscription_end_date))}}</span>
                                 </div>
                                 <div class="col-auto">
@@ -100,7 +100,7 @@
             <div class="card">
                 <!-- Card header -->
                 <div class="card-header border-0">
-                    <h3 class="mb-0">ORDENES PENDIENTES</h3>
+                    <h3 class="mb-0">PENDING ORDERS</h3>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
@@ -108,11 +108,11 @@
                         <thead class="thead-light">
                         <tr>
                             <th>#</th>
-                            <th>Orden N°</th>
-                            <th>Mesa N°</th>
-                            <th>Nombre Cliente</th>
+                            <th>Order Id</th>
+                            <th>Table No</th>
+                            <th>Customer Name</th>
                             <th>Total</th>
-                            <th>Acción</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody class="list">
@@ -129,16 +129,16 @@
                                 <td>
                                     @if($pending->status == 1)
                                         <a class="btn btn-primary btn-sm text-white"
-                                           onclick="document.getElementById('accept_order{{$pending->id}}').submit();">Aceptar
-                                            Orden</a>
+                                           onclick="document.getElementById('accept_order{{$pending->id}}').submit();">Accept
+                                            Order</a>
                                         <a class="btn btn-danger btn-sm text-white"
-                                           onclick="document.getElementById('reject_order{{$pending->id}}').submit();">Rechazar
-                                            Orden</a>
+                                           onclick="document.getElementById('reject_order{{$pending->id}}').submit();">Reject
+                                            Order</a>
                                     @endif
 
                                     @if($pending->status == 2)
                                         <a class="btn btn-outline-success btn-sm"
-                                           onclick="document.getElementById('complete_order{{$pending->id}}').submit();">Completar
+                                           onclick="document.getElementById('complete_order{{$pending->id}}').submit();">Complete
                                             Order</a>
                                     @endif
 
@@ -147,7 +147,7 @@
                                     @endif
 
                                     @if($pending->status == 4)
-                                        <a class="btn btn-success btn-sm text-white">Completado</a>
+                                        <a class="btn btn-success btn-sm text-white">Completed</a>
                                     @endif
 
 

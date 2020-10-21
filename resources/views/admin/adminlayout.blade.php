@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Chef Digital Menu</title>
+    <title>Admin Page nel</title>
 
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
@@ -91,12 +91,12 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default dropdown-menu-right">
                             <div class="row shortcuts px-4">
-                                <a href="{{route('all_sliders')}}" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-red">
-                      <i class="ni ni-album-2"></i>
-                    </span>
-                                    <small>Sliders</small>
-                                </a>
+{{--                                <a href="{{route('all_sliders')}}" class="col-4 shortcut-item">--}}
+{{--                    <span class="shortcut-media avatar rounded-circle bg-gradient-red">--}}
+{{--                      <i class="ni ni-album-2"></i>--}}
+{{--                    </span>--}}
+{{--                                    <small>Sliders</small>--}}
+{{--                                </a>--}}
                                 <a href="{{route('add_store')}}" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
                       <i class="ni ni-bag-17"></i>

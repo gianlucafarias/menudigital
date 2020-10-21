@@ -6,7 +6,7 @@
         <!-- Brand -->
         <div class="sidenav-header d-flex align-items-center">
             <a class="navbar-brand" >
-                <img src={{asset("new/img/brand/blue.png")}} class="navbar-brand-img" alt="...">
+               <h2>{{ Auth::user()->store_name }}</h2>
             </a>
             <div class="ml-auto">
                 <!-- Sidenav toggler -->
